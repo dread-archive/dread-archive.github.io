@@ -40,14 +40,25 @@
       <a href="/folklore/">Folklore</a>
       <a href="/readings/">Readings</a>
     </nav>
-    <p class="meta-line">412 catalogued · 100 public · last update 2026-09-27 03:14</p>
+    <p class="meta-line">412 catalogued · 100 public · last update 2026-09-28 03:14</p>
   </div>
 </header>
 
   <main class="wrap">
     <article class="record withdrawn">
   <div class="record-head"><span class="rid">DA-????</span><span class="rtype">Not found</span></div>
-  <p class="verdict">This entry is not public, or it has not been written yet.</p>
+  <p class="verdict" id="nf">This entry is not public, or it has not been written yet.</p>
+  <script>
+    (function () {
+      var m = location.pathname.match(/da-(\d{1,4})/i);
+      if (!m) return;
+      var n = ("0000" + m[1]).slice(-4);
+      document.querySelector(".record-head .rid").textContent = "DA-" + n;
+      document.getElementById("nf").textContent = Number(n) > 412
+        ? "DA-" + n + " has not been catalogued yet."
+        : "DA-" + n + " is catalogued. It is not public.";
+    })();
+  </script>
   <p><a href="/catalogue/">Return to the catalogue</a></p>
 </article>
 
@@ -63,5 +74,6 @@
   </div>
 </footer>
 
+  <script src="/assets/js/archive.js" defer></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /0000/
+Disallow: /sessions/
 
 Sitemap: https://dread-archive.github.io/sitemap.xml
