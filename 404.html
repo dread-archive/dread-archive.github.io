@@ -40,7 +40,7 @@
       <a href="/folklore/">Folklore</a>
       <a href="/readings/">Readings</a>
     </nav>
-    <p class="meta-line">422 catalogued · 200 public · last update 2026-10-02 03:14</p>
+    <p class="meta-line">426 catalogued · 214 public · last update 2026-10-03 03:14</p>
   </div>
 </header>
 
@@ -54,7 +54,7 @@
       if (!m) return;
       var n = ("0000" + m[1]).slice(-4);
       document.querySelector(".record-head .rid").textContent = "DA-" + n;
-      document.getElementById("nf").textContent = Number(n) > 422
+      document.getElementById("nf").textContent = Number(n) > 426
         ? "DA-" + n + " has not been catalogued yet."
         : "DA-" + n + " is catalogued. It is not public.";
     })();
